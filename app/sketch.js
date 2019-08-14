@@ -1,8 +1,11 @@
-let result, score, randomLetter, randomNumber, text, letter, number;
+let result, score, randomLetter, randomNumber, text, letter, number, scale;
+
 
 //Set up the sketch
 function setup() {
-  var canvas = createCanvas(480, 480);
+  scale = (windowWidth) / 30;
+
+  var canvas = createCanvas(scale*8, scale*8);
   canvas.parent('sketch-holder');
   background(230);
   score = 0;
@@ -51,8 +54,8 @@ function generateRandom(number){
 function createBoard(){
   p1 = 0;
   p2 = 0;
-  p3 = 60;
-  p4 = 60;
+  p3 = scale;
+  p4 = scale;
 
   randomLetter = generateRandom(8);
   //Getting coordinate value
@@ -112,9 +115,9 @@ function createBoard(){
       }
 
       rect(p1, p2, p3, p4);
-      p1 = p1 + 60;
+      p1 = p1 + scale;
     }
     p1 = 0;
-    p2 = p2 + 60;
+    p2 = p2 + scale;
   }
 }

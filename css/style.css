@@ -22,11 +22,8 @@ html, body{
     text-align: center;
 }
 
-.container-text{
-}
-
 input{
-    width: 460px;
+    width: 26%;
     margin-top: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
