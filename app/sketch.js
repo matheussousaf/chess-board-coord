@@ -1,7 +1,5 @@
 let result, score, randomLetter, randomNumber, text, letter, number;
 
-var correct, incorrect;
-
 //Set up the sketch
 function setup() {
   var canvas = createCanvas(480, 480);
@@ -11,12 +9,6 @@ function setup() {
 
   text = select("#coords");
   reload();
-}
-
-//Preload of sounds
-function preload(){
-  correct = loadSound("../assets/correct.mp3");
-  incorrect = loadSound("../assets/incorrect.wav");
 }
 
 //Reloads board
@@ -35,13 +27,11 @@ function keyPressed(){
       scoreText = select("#score");
       scoreText.html(`Score: ${score}`);
       r.style('color', "#00FF01");
-      correct.play();
     }
     else{
       r = select(".status");
       r.html("Incorreto!");
       r.style('color', "red");
-      incorrect.play();
     }
     text.value("");
     reload();
