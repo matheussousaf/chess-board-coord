@@ -1,6 +1,6 @@
 ## Chess Board - Coordinates
 
-**Description:** Simple app made in **p5.js** for beginners learn chess :chess_pawn: coordinates.
+:pushpin:**Description:** Simple app made in **p5.js** for beginners learn chess coordinates.
 
 ---
 
