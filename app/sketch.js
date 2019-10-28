@@ -25,7 +25,7 @@ function keyPressed(){
   if(keyCode === ENTER){
     if(text.value().toString() == result){
       r = select(".status");
-      r.html("Correto!");
+      r.html("Correct!");
       score++;
       scoreText = select("#score");
       scoreText.html(`Score: ${score}`);
@@ -33,7 +33,8 @@ function keyPressed(){
     }
     else{
       r = select(".status");
-      r.html("Incorreto!");
+      r.html("Incorrect!");
+      score = 0;
       r.style('color', "red");
     }
     text.value("");
